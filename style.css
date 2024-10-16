@@ -90,7 +90,7 @@ h3 {
 h1,
 h2 {
     font-family: 'Young Serif', 'Outfit', sans-serif;
-    color: black;
+    color: var(--Stone-900);
     font-size: 2rem;
     margin: 1rem 0;
 }
@@ -105,12 +105,17 @@ h2 {
     color: var(--Brown-800);
 }
 
+li {
+    padding-left: 1.5rem;
+}
+
 li::marker {
     color: var(--Brown-800);
+    font-weight: 600;
 }
 
 li span {
-    color: var(--Stone-900);
+    color: var(--Stone-600);
     font-weight: 600;
 }
 
@@ -124,6 +129,11 @@ table td {
     /* Add some padding */
     border-bottom: 1px solid var(--Stone-600);
     /* Add horizontal line below each row */
+}
+
+td[data-cell="nutrient-value"] {
+    color: var(--Brown-800);
+    font-weight: 600;
 }
 
 table tr:last-child td {
@@ -146,15 +156,37 @@ table tr:last-child td {
     margin: 1.5rem 0;
 }
 
-@media (max-width:375px) {
+@media (max-width:500px) {
     .container {
         margin: 0;
         border-radius: 0;
+        padding: 0;
     }
 
     img {
         border-radius: 0;
         padding: 0;
         overflow: visible;
+    }
+
+
+    .image-description h1,
+    .image-description p {
+        padding: 0 1.5rem;
+    }
+
+    .description {
+        margin: 1.5rem;
+    }
+
+    
+    .nutrition {
+        padding: 0 1.5rem;
+    }
+
+    .ingredients,
+    .instructions {
+        margin: 0 1.5rem;
+        border-bottom: 1px solid var(--Stone-600);
     }
 }
